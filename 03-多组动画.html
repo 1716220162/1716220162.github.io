@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background: pink;
+            /* animation:动画名称 动画时间 [运动曲线  何时开始  播放次数  是否反方向]; */
+            /* animation-iteration-count:infinite;  无限循环播放 */
+            /* animation-play-state:paused;   暂停动画" */
+            animation: go 1s;
+            animation-iteration-count: infinite;
+        }
+        #box:hover {
+            animation-play-state: paused;
+        }
+        
+        /* 定义动画 */
+        @keyframes go {
+            0% {  /* from */
+                transform: translate3d(0,0,0);
+            } 
+            25% {
+                transform: translate3d(800px,0,0);
+            }
+            50% {
+                transform: translate3d(800px,400px,0);
+            }
+            75% {
+                transform: translate3d(0,400px,0);
+            }
+            100% {  /* to */
+                transform: translate3d(0,0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 500px;
+            margin: 30px auto;
+            perspective: 800px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        #box div {
+            position: absolute;
+            left: 0;
+            top: 102px;
+            width: 500px;
+            transform-style: preserve-3d;
+            transform-origin: top;
+        }
+
+        #box span {
+            height: 100px;
+            border: 1px solid #000;
+            background: #ccc;
+            display: block;
+        }
+
+        #box>div:nth-of-type(1) {
+           top: 0;
+       }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div style="transform:rotateX(-45deg)">
+            <span>1</span>
+            <div  style="transform:rotateX(90deg)">
+                <span>2</span>
+                <div style="transform:rotateX(-90deg)">
+                    <span>3</span>
+                    <div style="transform:rotateX(90deg)">
+                        <span>4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

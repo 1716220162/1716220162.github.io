@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #banner {
+            margin: 100px auto;
+            width: 882px;
+            border: 1px solid #f00;
+            overflow: hidden;
+        }
+        #picList {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 200%;
+            height: 86px;
+            /* animation:动画名称 动画时间 [运动曲线  何时开始  播放次数  是否反方向]; */
+            animation: moving 5s linear infinite;
+        }
+        #picList li {
+            float: left;
+        }
+        #picList li img {
+            vertical-align: top;
+        }
+        #banner:hover #picList {
+            animation-play-state: paused;/* 动画暂停 */
+        }
+
+        @keyframes moving {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-882px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <ul id="picList">
+            <li><img src="img/nav1.jpg" alt=""></li>
+            <li><img src="img/nav2.jpg" alt=""></li>
+            <li><img src="img/nav3.jpg" alt=""></li>
+            <li><img src="img/nav4.jpg" alt=""></li>
+            <li><img src="img/nav5.jpg" alt=""></li>
+            <li><img src="img/nav6.jpg" alt=""></li>
+            <li><img src="img/nav7.jpg" alt=""></li>
+            <li><img src="img/nav1.jpg" alt=""></li>
+            <li><img src="img/nav2.jpg" alt=""></li>
+            <li><img src="img/nav3.jpg" alt=""></li>
+            <li><img src="img/nav4.jpg" alt=""></li>
+            <li><img src="img/nav5.jpg" alt=""></li>
+            <li><img src="img/nav6.jpg" alt=""></li>
+            <li><img src="img/nav7.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

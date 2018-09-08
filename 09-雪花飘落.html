@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background: url(img/bg2.jpg) 
+            no-repeat;
+            background-size: cover;
+        } 
+        img {
+            display: block;
+            width: 100%;
+        }
+        #sonwMask {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/snow1.png),
+            url(img/snow1.png);
+            animation: snowMoving 10s linear infinite;
+            pointer-events: none;
+        }
+        a {
+            font-size: 40px;
+            color: #fff;
+        }
+        /* --------------------- */
+        @keyframes snowMoving {
+            from {
+                background-position: 0 0, 0 0;
+            } 
+            to {
+                background-position: 500px 500px,1000px 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="img/bg2.jpg" alt="">
+    <img src="img/bg2.jpg" alt=""> -->
+    <div id="sonwMask"></div>
+    <!-- <a href="http:www.baidu.com">百度一下我就知道</a> <br>
+    <a href="http:www.baidu.com">百度一下我就知道</a> <br>
+    <a href="http:www.baidu.com">百度一下我就知道</a> <br>
+    <a href="http:www.baidu.com">百度一下我就知道</a> <br> -->
+</body>
+</html>
